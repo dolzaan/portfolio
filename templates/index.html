@@ -17,35 +17,18 @@
         </nav>
     </header>
     
-    <section id="sobre">
-        <h2>Sobre Mim</h2>
-        <p>Sou um desenvolvedor Python apaixonado por criar soluções inovadoras.</p>
-    </section>
-    
-    <section id="projetos">
-        <h2>Meus Projetos</h2>
-        <ul>
-            <li>Projeto 1</li>
-            <li>Projeto 2</li>
-            <li>Projeto 3</li>
-        </ul>
-    </section>
-    
+    <div class="hero-section">
+        <img src="/static/imagens/minha-foto.png" alt="Minha Foto" class="profile-photo">
+        <div class="hero-content">
+            <h1>Olá! Sou o Paulo Cesar Dolzan</h1>
+            <p>Atuo como assistente de TI na Agro Sandri onde presto serviços como suporte N2 além de administrar as despesas financeiras do setor também gerenciar os ativos e realizar compras de equipamentos para a empresa. Estou sempre em busca de coisas novas para realizar para assim estar aperfeiçoando meus conhecimentos e prestar cada vez melhor meus serviços</p>
+        </div>
+    </div>
+
     <section id="contato">
-        <h2>Contato</h2>
-        <form>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-    
+
     <footer>
-        <p>&copy; 2023 Meu Portfólio. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Paulo Cesar Dolzan. Todos os direitos reservados.</p>
     </footer>
     
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>

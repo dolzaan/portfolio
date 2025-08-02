@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding-top: 60px; /* Espaço para compensar a barra fixa */
-    font-family: Arial, sans-serif;
-    background-image: url('../images/space.jpg');
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url('/static/imagens/space.jpg');
 }
 
 header {
@@ -16,7 +16,7 @@ header {
     display: flex;
     justify-content: center; /* Centraliza os itens */
     align-items: center;
-    height: 60px; /* Define a altura da barra */
+    height: 70px; /* Define a altura da barra */
     backdrop-filter: blur(10px); /* Adiciona o efeito de blur */
     -webkit-backdrop-filter: blur(10px); /* Suporte para navegadores WebKit */
 }
@@ -35,7 +35,7 @@ header nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 30px; /* Espaçamento entre os links */
+    gap: 70px; /* Espaçamento entre os links */
 }
 
 header nav ul li {
@@ -76,4 +76,41 @@ header nav a:hover {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.hero-section {
+    width: 90%; /* Ocupa toda a largura do site */
+    height: 500px; /* Define a altura do bloco */
+    background: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px); /* Adiciona o efeito de blur */
+    -webkit-backdrop-filter: blur(10px); /* Suporte para navegadores WebKit */
+    border-radius: 20px; /* Cantos arredondados */
+    display: flex; /* Alinha os itens horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    color: #ffffff; /* Cor do texto */
+    margin: 20px auto; /* Adiciona espaçamento externo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    margin: 0 0 30px; /* Adiciona 20px de espaço abaixo do h1 */
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin: 0; /* Remove margens extras do parágrafo */
+}
+
+.profile-photo {
+    width: 400px; /* Define o tamanho da foto */
+    height: 400px; /* Define o tamanho da foto */
+    border-radius: 50%; /* Torna a foto arredondada */
+    margin-right: 20px; /* Espaçamento entre a foto e o texto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra à foto */
+}
+
+.hero-content {
+    flex: 1; /* Faz o texto ocupar o espaço restante */
 }
