@@ -2,11 +2,11 @@ body {
     margin: 0;
     padding-top: 60px; /* Espaço para compensar a barra fixa */
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-image: url('../images/space.jpg');
 }
 
 header {
-    background: #35424a;
+    background: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
     color: #ffffff;
     position: fixed;
     top: 0;
@@ -17,6 +17,8 @@ header {
     justify-content: center; /* Centraliza os itens */
     align-items: center;
     height: 60px; /* Define a altura da barra */
+    backdrop-filter: blur(10px); /* Adiciona o efeito de blur */
+    -webkit-backdrop-filter: blur(10px); /* Suporte para navegadores WebKit */
 }
 
 header h1 {
