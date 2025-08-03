@@ -7,8 +7,6 @@ body {
     animation: gradient-animation 10s ease infinite; /* Animação do gradiente */
 }
 
-/* Define a animação do gradiente */
-
 html {
     scroll-behavior: smooth;
   }
@@ -112,6 +110,7 @@ header nav a:hover {
     color: #ffffff; /* Cor do texto */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Aumenta a sombra */
     padding: 20px; /* Espaçamento interno */
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Transição suave ao passar o mouse */
 }
 
 .hero-section h1 {
@@ -124,12 +123,22 @@ header nav a:hover {
     margin: 0; /* Remove margens extras do parágrafo */
 }
 
+.hero-section:hover {
+    transform: scale(1.02); /* Expande em 5% ao passar o mouse */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Aumenta a sombra ao passar o mouse */
+}
+
 .profile-photo {
     width: 400px; /* Define o tamanho da foto */
     height: 400px; /* Define o tamanho da foto */
     border-radius: 50%; /* Torna a foto arredondada */
     margin-right: 20px; /* Espaçamento entre a foto e o texto */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra à foto */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); /* Adiciona sombra à foto */
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Transição suave ao passar o mouse */
+}
+
+.profile-photo:hover {
+    transform: scale(1.05); /* Expande em 5% ao passar o mouse */
 }
 
 .hero-content {
