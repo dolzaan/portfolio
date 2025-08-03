@@ -8,6 +8,11 @@ body {
 }
 
 /* Define a animação do gradiente */
+
+html {
+    scroll-behavior: smooth;
+  }
+  
 @keyframes gradient-animation {
     0% {
         background-position: 0% 50%;
@@ -19,22 +24,6 @@ body {
         background-position: 0% 50%;
     }
 }
-
-@keyframes fadeUp {
-    0% {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .hero-section {
-    animation: fadeUp 1s ease-out;
-  }
-  
 
 header {
     background: rgba(0, 0, 0, 0.2); /* Fundo semi-transparente */
@@ -105,7 +94,7 @@ header nav a:hover {
     padding: 10px 0;
     background: #35424a;
     color: #ffffff;
-    position: relative;
+    position: center;
     bottom: 0;
     width: 100%;
 }
@@ -148,6 +137,21 @@ header nav a:hover {
 }
 
 .projetos{
+    margin: 50px auto 20px; /* Adiciona 100px de espaço acima da hero-section */
+    width: 90%; /* Ocupa toda a largura do site */
+    height: 500px; /* Define a altura do bloco */
+    background: rgba(0, 0, 0, 0.2); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px); /* Adiciona o efeito de blur */
+    -webkit-backdrop-filter: blur(10px); /* Suporte para navegadores WebKit */
+    border-radius: 20px; /* Cantos arredondados */
+    display: flex; /* Alinha os itens horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    color: #ffffff; /* Cor do texto */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Aumenta a sombra */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.contatos {
     margin: 50px auto 20px; /* Adiciona 100px de espaço acima da hero-section */
     width: 90%; /* Ocupa toda a largura do site */
     height: 500px; /* Define a altura do bloco */
