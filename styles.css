@@ -115,12 +115,14 @@ header nav a:hover {
 
 .hero-section h1 {
     font-size: 2.5em;
-    margin: 0 0 30px; /* Adiciona 20px de espaço abaixo do h1 */
-}
+    position: relative;
+    top: -50px; /* Move o título para cima */
+ }
 
 .hero-section p {
     font-size: 1.2em;
-    margin: 0; /* Remove margens extras do parágrafo */
+    position: relative;
+    top: -30px; /* Move o parágrafo para cima */
 }
 
 .hero-section:hover {
@@ -133,16 +135,70 @@ header nav a:hover {
     height: 400px; /* Define o tamanho da foto */
     border-radius: 50%; /* Torna a foto arredondada */
     margin-right: 20px; /* Espaçamento entre a foto e o texto */
+    filter: grayscale(100%);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); /* Adiciona sombra à foto */
-    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Transição suave ao passar o mouse */
+    transform: scale(1); /* Estado inicial da transformação */
+    transition: 
+        transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+        filter 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Transições combinadas */
 }
 
 .profile-photo:hover {
     transform: scale(1.05); /* Expande em 5% ao passar o mouse */
+    filter: grayscale(0%); /* Remove o efeito de escala de cinza ao passar o mouse */
 }
+
 
 .hero-content {
     flex: 1; /* Faz o texto ocupar o espaço restante */
+}
+
+.html {
+    filter: grayscale(100%);
+    transition:
+        transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+        filter 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+.html:hover {
+    filter: grayscale(0%);
+    transform: scale(1.10); /* Expande em 5% ao passar o mouse */
+}
+
+.css{
+    filter: grayscale(100%);
+    transition:
+        transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+        filter 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+.css:hover {
+    filter: grayscale(0%);
+    transform: scale(1.10); /* Expande em 5% ao passar o mouse */
+}
+
+.javascript{
+    filter: grayscale(100%);
+    transition:
+        transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+        filter 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+.javascript:hover {
+    filter: grayscale(0%);
+    transform: scale(1.10); /* Expande em 5% ao passar o mouse */
+}
+
+.python{
+    filter: grayscale(100%);
+    transition:
+        transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+        filter 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+.python:hover {
+    filter: grayscale(0%);
+    transform: scale(1.10); /* Expande em 5% ao passar o mouse */
 }
 
 .projetos{
