@@ -1,10 +1,11 @@
 body {
     margin: 0;
+    min-height: 300vh; /* altura maior pra ter rolagem */
     padding-top: 60px; /* Espaço para compensar a barra fixa */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: linear-gradient(45deg, #f7ba2c, #ea5459); /* Gradiente de fundo */
-    background-size: 400% 400%; /* Faz o gradiente ser maior que a tela */
-    animation: gradient-animation 10s ease infinite; /* Animação do gradiente */
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    background: linear-gradient(to bottom, #ff6600, #ff9a00, #ffc400, #ffffff);
+    background-attachment: fixed; /* fixa o fundo enquanto a página rola */
+    background-size: 100% 300%;
 }
 
 html {
@@ -23,10 +24,17 @@ html {
     }
 }
 
+@keyframes slideDown {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
 header {
-    background: rgba(0, 0, 0, 0.2); /* Fundo semi-transparente */
+    background: white; /* Fundo semi-transparente */
     color: #3f12d2;
-    position: fixed;
+    position:fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -38,6 +46,8 @@ header {
     backdrop-filter: blur(10px); /* Adiciona o efeito de blur */
     -webkit-backdrop-filter: blur(10px); /* Suporte para navegadores WebKit */
     box-shadow:0 2px 30px rgba(0, 0, 0, 0.5) ;
+    animation: slideDown 0.8s ease-out forwards;
+    transform: translateY(-50px);
 }
 
 header h1 {
@@ -62,7 +72,7 @@ header nav ul li {
 }
 
 header nav a {
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2em;
@@ -153,53 +163,19 @@ header nav a:hover {
     flex: 1; /* Faz o texto ocupar o espaço restante */
 }
 
-.html {
+.logo{
     filter: grayscale(100%);
     transition:
-        transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
-        filter 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
+    transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+    filter 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    padding: 10px; 
 }
 
-.html:hover {
-    filter: grayscale(0%);
-    transform: scale(1.10); /* Expande em 5% ao passar o mouse */
+.logo:hover{
+    transform: scale(1.05); /* Expande em 5% ao passar o mouse */
+    filter: grayscale(0%); /* Remove o efeito de escala de cinza ao passar o mouse */
 }
 
-.css{
-    filter: grayscale(100%);
-    transition:
-        transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
-        filter 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
-}
-
-.css:hover {
-    filter: grayscale(0%);
-    transform: scale(1.10); /* Expande em 5% ao passar o mouse */
-}
-
-.javascript{
-    filter: grayscale(100%);
-    transition:
-        transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
-        filter 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
-}
-
-.javascript:hover {
-    filter: grayscale(0%);
-    transform: scale(1.10); /* Expande em 5% ao passar o mouse */
-}
-
-.python{
-    filter: grayscale(100%);
-    transition:
-        transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
-        filter 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
-}
-
-.python:hover {
-    filter: grayscale(0%);
-    transform: scale(1.10); /* Expande em 5% ao passar o mouse */
-}
 
 .projetos{
     margin: 50px auto 20px; /* Adiciona 100px de espaço acima da hero-section */
