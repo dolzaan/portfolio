@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem vindos!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./src/output.css">
-    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
 </head>
 
 
-<body id="body">
-    <div class="stars"></div>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#body">Sobre Mim</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contatos">Contato</a></li>
-            </ul>
+<body class="bg-black text-white">
+    <header class="w-full flex items-center justify-between px-6 py-4 border-b border-gray-800">
+        <div class="text-xl font-bold tracking-wide"></div>
+        <nav class="space-x-8 hidden md:flex">
+            <a href="#sobre" class="hover:text-gray-400 transition">Sobre mim</a>
+            <a href="#projetos" class="hover:text-gray-400 transition">Projetos</a>
+            <a href="#contato" class="hover:text-gray-400 transition">Contato</a>
         </nav>
+        <div>
+            <a href="#contato" class="bg-white text-black px-4 py-2 rounded-md font-medium hover:bg-gray-300 transition">
+              Fale comigo
+            </a>
+        </div>
     </header>
     
     <div class="hero-section" id="hero">
