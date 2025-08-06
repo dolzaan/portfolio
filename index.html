@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,17 +13,17 @@
 </head>
 
 
-<body class="min-h-screen bg-[radial-gradient(circle_at_center,_rgba(31,41,55,0.9),_rgba(17,24,39,1))]">
-    <header class="bg-transparent py-4 text-white w-full flex justify-center px-6 py-4 shadow-2xl p-4 font-Inter">
+<body id="index" class="min-h-screen bg-[radial-gradient(circle_at_center,_rgba(31,41,55,0.9),_rgba(17,24,39,1))]">
+    <header class="bg-transparent z-50 fixed backdrop-blur-[3px] py-4 text-white w-full flex justify-center px-6 py-4 shadow-2xl p-4 font-Inter">
         <div class="text-xl font-inter tracking-wide"></div>
         <nav class="space-x-60 flex items-center justify-center">
-            <a href="#sobre" class="hover:text-gray-400 transition">SOBRE MIM</a>
+            <a href="#index" class="hover:text-gray-400 transition">SOBRE MIM</a>
             <a href="#projetos" class="hover:text-gray-400 transition">PROJETOS</a>
             <a href="#contato" class="hover:text-gray-400 transition">CONTATOS</a>
         </nav>
     </header>
     
-    <section class="flex justify-center items-center py-12 text-white">
+    <section class="flex justify-center pt-20 items-center py-12 text-white">
         <div class="max-w-7xl w-full bg-white/60 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] p-8 transform transition duration-300 hover:scale-105">
           <div class="flex flex-col items-center text-center">
             <img src="/imagens/minha-foto.png" alt="Foto de Paulo Cesar Dolzan" class="w-40 h-40 rounded-full shadow-lg mb-6 transform transition duration-300 hover:scale-105 object-cover grayscale hover:grayscale-0 transition duration-500">
@@ -37,18 +37,40 @@
             </p>
             <h3 class="text-lg text-gray-700 font-semibold mb-4">Tecnologias que uso no dia a dia:</h3>
             <div class="flex gap-4 justify-center">
-              <img src="/imagens/html_logo.png" alt="HTML" class="w-10 h-10 object-cover grayscale hover:grayscale-0 transition duration-500 transform transition duration-300 hover:scale-105">
-              <img src="/imagens/logocss3vector-Photoroom.png" alt="CSS" class="w-10 h-10 object-cover grayscale hover:grayscale-0 transition duration-500 transform transition duration-300 hover:scale-105">
-              <img src="/imagens/javascript_logo.png" alt="JavaScript" class="w-10 h-10 object-cover grayscale hover:grayscale-0 transition duration-500 transform transition duration-300 hover:scale-105">
-              <img src="/imagens/python_logo.png" alt="Python" class="w-10 h-10 object-cover grayscale hover:grayscale-0 transition duration-500 transform transition duration-300 hover:scale-105">
-              <img src="/imagens/tailwind_logo.png" alt="Tailwind" class=""w-10 h-10 object-cover grayscale hover:grayscale-0 transition duration-500 transform transition duration-300 hover:scale-105">
+              <img src="/imagens/html_logo.png" alt="HTML" class="w-10 h-10 transition duration-500 transform transition duration-300 hover:scale-105">
+              <img src="/imagens/logocss3vector-Photoroom.png" alt="CSS" class="w-10 h-10 transition duration-500 transform transition duration-300 hover:scale-105">
+              <img src="/imagens/javascript_logo.png" alt="JavaScript" class="w-10 h-10 transition duration-500 transform transition duration-300 hover:scale-105">
+              <img src="/imagens/python_logo.png" alt="Python" class="w-10 h-10 transition duration-500 transform transition duration-300 hover:scale-105">
+              <img src="/imagens/tailwind_logo.png" alt="Tailwind" class="w-10 h-10 transition duration-500 transform transition duration-300 hover:scale-105">
             </div>
           </div>
         </div>
       </section>
 
-    <div class="" id="projetos">
-        <h2>Projetos</h2>
+    <section class="flex justify-center items-center py-12 text-white">
+        <div class="max-w-7xl w-full bg-white/60 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] p-8 transform transition duration-300 hover:scale-105" id="projetos">
+            <h2 class="flex justify-center text-2xl text-gray-700 font-bold mb-4">Projetos</h2>
+            <div id="projeto1" class="flex justify-center gap-6 flex-wrap">
+    
+                <!-- Card 1 -->
+                <a href="https://github.com/dolzaan/portfolio" target="_blank" 
+                   class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transform hover:scale-105 transition duration-300">
+                  <h3 class="projeto-card bg-white p-4 rounded shadow-md text-center">Projeto 1</h3>
+                  <p class="text-gray-600">Carregando</p>
+                </a>
+                
+                <!-- Card 2 -->
+                <a href="https://github.com/dolzaan/portfolio" target="_blank" 
+                   class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transform hover:scale-105 transition duration-300">
+                  <h3 class="text-lg font-semibold mb-2">Projeto 2</h3>
+                  <p class="text-gray-600">Descrição rápida do projeto...</p>
+                </a>
+            </div>
+        </div>
+        
+        
+    </section>
+      
     </div>
     
     <div class="" id="contatos">
@@ -61,5 +83,36 @@
     
     <script src="{{ url_for('static', filename='js/scripts.js') }}">
     </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.getElementById("projeto1");
+  
+      if (!container) {
+        console.error("Elemento #projeto1 não encontrado.");
+        return;
+      }
+  
+      fetch("https://api.github.com/repos/dolzaan/portfolio")
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("Erro na requisição: " + response.status);
+          }
+          return response.json();
+        })
+        .then(data => {
+          container.innerHTML = `
+            <h3 class="text-xl font-semibold mb-2">📌 ${data.name}</h3>
+            <p class="text-sm text-gray-700 mb-2">${data.description || "Sem descrição disponível"}</p>
+            <p class="text-sm text-gray-600 mb-2">⭐ ${data.stargazers_count} | 🧠 ${data.language || "N/A"}</p>
+            <a href="${data.html_url}" target="_blank" class="text-blue-600 hover:underline">Ver no GitHub</a>
+          `;
+        })
+        .catch(error => {
+          console.error("Erro ao carregar repositório:", error);
+          container.innerHTML = `<p class="text-red-500">Erro ao carregar projeto.</p>`;
+        });
+    });
+  </script>  
 </body>
 </html>
