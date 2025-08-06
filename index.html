@@ -13,8 +13,14 @@
 </head>
 
 
-<body id="index" class="min-h-screen bg-[radial-gradient(circle_at_center,_rgba(31,41,55,0.9),_rgba(17,24,39,1))]">
-    <header class="bg-transparent z-50 fixed backdrop-blur-[3px] py-4 text-white w-full flex justify-center px-6 py-4 shadow-2xl p-4 font-Inter">
+<body id="index" class="relative min-h-screen bg-gray-900">
+  <div class="fixed inset-0 -z-50">
+    <!-- Gradiente animado -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/0 via-white/10 to-white/0 animate-light-sweep"></div>
+    <!-- Textura geometrica - IMPORTANTE: usar bg-fixed para parallax -->
+    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/gray-sand.png')] bg-fixed opacity-30"></div>
+  </div>
+    <header class="bg-transparent z-50 fixed backdrop-blur-[3px] py-4 text-gray-50 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] w-full flex justify-center p-6 rounded-b-lg font-poppins tracking-widest">
         <div class="text-xl font-inter tracking-wide"></div>
         <nav class="space-x-60 flex items-center justify-center">
             <a href="#index" class="hover:text-gray-400 transition">SOBRE MIM</a>

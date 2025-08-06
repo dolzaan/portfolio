@@ -1,4 +1,28 @@
 /*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes gradientMove {
+    0% {
+      background-position: 50% 50%;
+    }
+    50% {
+      background-position: 0% 100%;
+    }
+    100% {
+      background-position: 50% 50%;
+    }
+  }
+  .bg-animated-radial {
+    background: radial-gradient(circle at center, #1e1b4b, #312e81, #0f172a);
+    background-size: 200% 200%;
+    animation: gradientMove 10s ease-in-out infinite;
+  }
+}
+
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
