@@ -8,42 +8,30 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
-      },
-    },
-  },
-  plugins: [],
-  theme: {
-    extend: {
-      fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
-    },
-  },
-}
-
-module.exports = {
-  theme: {
-    extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       animation: {
+        gradientSlow: "gradient-slow 20s ease infinite",
+        'scroll-grid': 'scrollGrid 40s linear infinite',
         gradient: 'gradient 8s ease infinite',
+        'light-sweep': 'light-sweep 8s ease infinite',
       },
       keyframes: {
+        'gradient-slow': {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+        scrollGrid: {
+          '0%': { backgroundPosition: '0 0' },
+          '100%': { backgroundPosition: '100px 100px' },
+        },
         gradient: {
           '0%, 100%': { 'background-position': '0% 50%' },
           '50%': { 'background-position': '100% 50%' },
         },
-      },
-    },
-  },
-}
-
-module.exports = {
-  theme: {
-    extend: {
-      animation: {
-        'light-sweep': 'light-sweep 8s ease infinite',
-      },
-      keyframes: {
         'light-sweep': {
           '0%, 100%': { 'background-position': '0% 50%' },
           '50%': { 'background-position': '100% 50%' },
@@ -51,4 +39,5 @@ module.exports = {
       },
     },
   },
+  plugins: [],
 }
